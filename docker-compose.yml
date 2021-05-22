@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    build:
+      context: web
+    command: yarn dev
+    volumes:
+      - ./web:/app
+      - node-modules:/app/node_modules
+    ports:
+      - "8000:3000"
+volumes:
+  node-modules:
